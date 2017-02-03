@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.aditya.prototypehabba.R;
-import com.example.aditya.prototypehabba.map.SliderMenu.MainActivity;
+import com.example.aditya.prototypehabba.map.ResideMenu.MainActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

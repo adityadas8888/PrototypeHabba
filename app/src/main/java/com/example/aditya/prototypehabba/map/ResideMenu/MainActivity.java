@@ -1,4 +1,4 @@
-package com.example.aditya.prototypehabba.map.SliderMenu;
+package com.example.aditya.prototypehabba.map.ResideMenu;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.aditya.prototypehabba.R;
 import com.example.aditya.prototypehabba.map.MapsActivity;
+import com.example.aditya.prototypehabba.map.SlideMenu.SlideMenu;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ResideMenuItem itemCalendar;
     private ResideMenuItem itemSettings;
     private ResideMenuItem itemMaps;
+    private ResideMenuItem itemEvents;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // mContext = this;
         setUpMenu();                                                //sets up the side menus
         if( savedInstanceState == null )
-            changeFragment(new HomeFragment());                         //changes the Fragment
+            changeFragment(new HomeFragment());                         //changes the Fragment to home
     }
 
     private void setUpMenu() {
@@ -48,13 +50,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         itemHome     = new ResideMenuItem(this, R.drawable.icon_home,     "Home");              //sets the menu pictures
         itemSettings = new ResideMenuItem(this, R.drawable.icon_settings, "Settings");
         itemMaps = new ResideMenuItem(this,R.drawable.icon_maps, "Maps");
+        itemEvents = new ResideMenuItem(this,R.drawable.icon_settings,"Events");
         itemHome.setOnClickListener(this);
         itemSettings.setOnClickListener(this);
         itemMaps.setOnClickListener(this);
+        itemEvents.setOnClickListener(this);
 
         resideMenu.addMenuItem(itemHome, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemSettings, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemMaps,ResideMenu.DIRECTION_LEFT);
+        resideMenu.addMenuItem(itemEvents, ResideMenu.DIRECTION_LEFT);
         // You can disable a direction by setting ->
         resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT);
 
@@ -93,6 +98,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(getBaseContext(),"clicked",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, MapsActivity.class);
             startActivity(intent);
+
+        } else if (view ==itemEvents){
+            Toast.makeText(getBaseContext(),"clickedEvents",Toast.LENGTH_SHORT).show();
+            Intent intent1 = new Intent(MainActivity.this, SlideMenu.class);
+            startActivity(intent1);
 
         }
 

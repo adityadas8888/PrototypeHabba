@@ -1,7 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-   <style name="AppTheme" parent="Base.Theme.AppCompat"/>
+   <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">>
+       <item name="colorPrimary">@color/colorPrimary</item>
+       <item name="colorPrimaryDark">@color/colorPrimary</item>
+       <item name="colorAccent">
+           @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
+       </item>
+   </style>
 
     <!-- Customize your theme here. -->
 <style name="Base.Theme.AppCompat" parent="Theme.AppCompat.Light.NoActionBar">

@@ -28,15 +28,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".map.MapsActivity" />
-        <activity android:name="com.example.aditya.prototypehabba.map.SliderMenu.MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".map.MapsActivity" />
+        <activity android:name=".map.ResideMenu.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".map.SlideMenu.SlideMenu" />
+        <activity android:name=".map.SlideMenu.Event"></activity>
     </application>
 
 </manifest>

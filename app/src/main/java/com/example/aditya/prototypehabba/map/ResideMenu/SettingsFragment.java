@@ -1,7 +1,6 @@
-package com.example.aditya.prototypehabba.map.SliderMenu;
+package com.example.aditya.prototypehabba.map.ResideMenu;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
