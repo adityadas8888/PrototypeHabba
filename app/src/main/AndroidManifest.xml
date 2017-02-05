@@ -26,7 +26,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyBceBq_-ZO7qB_z0oTVmt3xB7uSjBZS5pA " />
 
         <activity android:name=".map.MapsActivity" />
         <activity android:name=".map.ResideMenu.MainActivity">
@@ -35,9 +35,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>s
         <activity android:name=".map.SlideMenu.SlideMenu" />
         <activity android:name=".map.SlideMenu.Event"></activity>
+        <activity android:name=".map.SlideMenu.Scroll"/>
     </application>
 
 </manifest>
