@@ -1,12 +1,11 @@
 package com.example.aditya.prototypehabba.map.ResideMenu;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
+import android.webkit.WebView;
 
 import com.example.aditya.prototypehabba.R;
 import com.special.ResideMenu.ResideMenu;
@@ -15,7 +14,7 @@ public class HomeFragment extends Fragment {
 
     private View parentView;
     private ResideMenu resideMenu;
-    Button haha;
+    WebView wb;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,12 +34,13 @@ public class HomeFragment extends Fragment {
 
             //    Toast.makeText(getContext(),"Click hua",Toast.LENGTH_LONG).show();
                 resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
+
             }
         });
 
         // add gesture operation's ignored views
-        FrameLayout ignored_view = (FrameLayout) parentView.findViewById(R.id.ignored_view);
-        resideMenu.addIgnoredView(ignored_view);
+        //FrameLayout ignored_view = (FrameLayout) parentView.findViewById(R.id.ignored_view);
+       // resideMenu.addIgnoredView(ignored_view);
     }
 
 }

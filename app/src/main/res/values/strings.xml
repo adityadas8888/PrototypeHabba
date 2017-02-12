@@ -6,8 +6,102 @@
     <string name="action_refresh">Settings</string>
     <string name="action_new">Settings</string>
     <string name="logo_desc">App logo</string>
-    <string name="country_name">Nigeria</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="Event1">Dance</string>
+    <string-array name="spinnerRoot">
+
+        <item>Dance</item>
+        <item>Design</item>
+        <item>Dramatics</item>
+        <item>Arts</item>
+        <item>LifeStyle</item>
+        <item>Literary Arts</item>
+        <item>Music</item>
+        <item>Miscellaneous</item>
+        <item>Gaming</item>
+        <item>Technical</item>
+        <item>Management</item>
+        <item>Intra-college</item>
+        <item>Dance</item>
+        <item>Design</item>
+        <item>Dramatics</item>
+        <item>Arts</item>
+        <item>LifeStyle</item>
+        <item>Literary Arts</item>
+        <item>Music</item>
+        <item>Miscellaneous</item>
+        <item>Gaming</item>
+        <item>Technical</item>
+        <item>Management</item>
+        <item>Intra-college</item>
+    </string-array>
+
+    <string-array name="Dance">
+        <item>Cinematics</item>
+        <item>Duet Dance</item>
+        <item>Folklore</item>
+        <item>Group Dance</item>
+    </string-array>
+
+    <string-array name="Design">
+        <item>Short Film Making</item>
+        <item>Add Making</item>
+        <item>Photography</item>
+        <item>Typography</item>
+    </string-array>
+
+    <string-array name="Dramatics">
+        <item>Improv Comedy</item>
+        <item>Mad Ads</item>
+    </string-array>
+
+    <string-array name="Arts">
+        <item>Fine Arts</item>
+        <item>Sketching</item>
+        <item>Vegitable Carving</item>
+    </string-array>
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GET STARTED</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">In Home Screen to view Menu.</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">To navigate through main event categories.</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">To select sub-categories of main events.</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">You are all set to enter the party!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="string_enter_name">Enter your name</string>
+    <string name="string_college">Enter your College</string>
+    <string name="string_mobile">Enter Mobile Number</string>
+    <string name="string_enter_email">Enter your email</string>
+    <string name="button_register">Register</string>
+    <string-array name="LifeStyle">
+        <item>Fashion Show</item>
+        <item>Be a super Diva</item>
+    </string-array>
+
+    <string-array name="Gaming">
+        <item>Fifa 14</item>
+        <item>Call of Duty</item>
+        <item>Dota 2</item>
+    </string-array>
+
+    <string-array name="Cinematics">
+        <item>252120</item>
+    </string-array>
 
 </resources>

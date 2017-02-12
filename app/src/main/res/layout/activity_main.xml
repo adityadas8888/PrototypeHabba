@@ -18,7 +18,8 @@
 
         <FrameLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="40dp"
+            android:background="@android:color/transparent">
 
             <Button
                 android:layout_width="28dp"
@@ -27,15 +28,6 @@
                 android:id="@+id/title_bar_left_menu"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="7dp"
-                android:text="MENU"
-                android:textSize="24sp"
-                android:textColor="#999999"
-                android:layout_gravity="center"/>
 
             <Button
                 android:layout_width="28dp"
@@ -51,13 +43,13 @@
             android:layout_height="5dp"
             android:background="#ebebeb"/>
 
-    </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/main_fragment">
+        </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/main_fragment">
-    </FrameLayout>
+    </LinearLayout>
 
 </LinearLayout>

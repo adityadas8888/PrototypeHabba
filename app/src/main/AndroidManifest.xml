@@ -28,17 +28,32 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBceBq_-ZO7qB_z0oTVmt3xB7uSjBZS5pA " />
 
-        <activity android:name=".map.MapsActivity" />
-        <activity android:name=".map.ResideMenu.MainActivity">
+        <activity android:name=".map.Map.MapsActivity" />
+        <activity android:name=".map.ResideMenu.MainActivity" />
+        <activity android:name=".map.Registration.Registration" />
+        <activity android:name=".map.Intro_Slider.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>s
+        </activity>
+        s
         <activity android:name=".map.SlideMenu.SlideMenu" />
-        <activity android:name=".map.SlideMenu.Event"></activity>
-        <activity android:name=".map.SlideMenu.Scroll"/>
+        <activity android:name=".map.Calender.Calender" />
+        <activity android:name=".map.Scroll.Scroll" />
+        <activity android:name=".map.GridviewMenu.card1.Dance" />
+        <activity android:name=".map.GridviewMenu.card2.Design_and_Digital_Arts" />
+        <activity android:name=".map.GridviewMenu.card3.Dramatics" />
+        <activity android:name=".map.GridviewMenu.card4.Gaming" />
+        <activity android:name=".map.GridviewMenu.card5.Intracollege" />
+        <activity android:name=".map.GridviewMenu.card6.Lifestyle" />
+        <activity android:name=".map.GridviewMenu.card8.Management" />
+        <activity android:name=".map.GridviewMenu.card7.Literary" />
+        <activity android:name=".map.GridviewMenu.card9.Miscellaneous" />
+        <activity android:name=".map.GridviewMenu.card10.Music" />
+        <activity android:name=".map.GridviewMenu.card11.Technical" />
+        <activity android:name=".map.Splash.SplashScreen"></activity>
     </application>
 
 </manifest>
