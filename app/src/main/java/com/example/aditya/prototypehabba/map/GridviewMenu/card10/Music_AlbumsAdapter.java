@@ -67,59 +67,45 @@ public class Music_AlbumsAdapter extends RecyclerView.Adapter<Music_AlbumsAdapte
 
                 switch (position) {
                     case 0:
-                        st=holder.title.getText().toString();
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",45);
+                        i.putExtra("num",44);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
-                        st=holder.title.getText().toString();
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",46);
+                        i1.putExtra("num",45);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
-                        st=holder.title.getText().toString();
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",47);
+                        i2.putExtra("num",46);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
-                        st=holder.title.getText().toString();
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",48);
+                        i3.putExtra("num",47);
                         view.getContext().startActivity(i3);
 
                         break;
                     case 4:
-                        st=holder.title.getText().toString();
                         Intent i4 = new Intent(view.getContext(),Scroll.class);
-                        i4.putExtra("num",49);
+                        i4.putExtra("num",48);
                         view.getContext().startActivity(i4);
 
                         break;
 
                     case 5:
-                        st=holder.title.getText().toString();
                         Intent i5 = new Intent(view.getContext(),Scroll.class);
-                        i5.putExtra("num",50);
+                        i5.putExtra("num",49);
                         view.getContext().startActivity(i5);
 
                         break;
                     case 6:
-                        st=holder.title.getText().toString();
                         Intent i6 = new Intent(view.getContext(),Scroll.class);
-                        i6.putExtra("num",51);
+                        i6.putExtra("num",50);
                         view.getContext().startActivity(i6);
-
-                        break;
-                    case 7:
-                        st=holder.title.getText().toString();
-                        Intent i7 = new Intent(view.getContext(),Scroll.class);
-                        i7.putExtra("num",52);
-                        view.getContext().startActivity(i7);
 
                         break;
                 }

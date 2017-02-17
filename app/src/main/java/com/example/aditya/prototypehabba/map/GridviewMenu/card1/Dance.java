@@ -95,15 +95,12 @@ public class Dance extends AppCompatActivity {
         int[] covers = new int[]{
                 R.drawable.album1,
                 R.drawable.album2,
-                R.drawable.album3};
+                };
 
-        Album a = new Album("Cinematic Free Style", 13, covers[0]);
+        Album a = new Album("Choreonight", 13, covers[0]);
         albumList.add(a);
 
-        a = new Album("Western", 8, covers[1]);
-        albumList.add(a);
-
-        a = new Album("Classical", 11, covers[2]);
+        a = new Album("Solo Dance", 8, covers[1]);
         albumList.add(a);
 
         adapter.notifyDataSetChanged();

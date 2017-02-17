@@ -67,29 +67,25 @@ public class Literary_AlbumsAdapter extends RecyclerView.Adapter<Literary_Albums
 
                 switch (position) {
                     case 0:
-                        st=holder.title.getText().toString();
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",30);
+                        i.putExtra("num",29);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
-                        st=holder.title.getText().toString();
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",31);
+                        i1.putExtra("num",30);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
-                        st=holder.title.getText().toString();
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",32);
+                        i2.putExtra("num",31);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
-                        st=holder.title.getText().toString();
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",33);
+                        i3.putExtra("num",32);
                         view.getContext().startActivity(i3);
 
                         break;

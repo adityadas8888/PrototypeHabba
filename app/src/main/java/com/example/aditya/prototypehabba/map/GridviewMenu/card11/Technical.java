@@ -96,18 +96,15 @@ public class Technical extends AppCompatActivity {
                 R.drawable.album1,
                 R.drawable.album2,
                 R.drawable.album3,
-                R.drawable.album4};
+                };
 
-        Album a = new Album("Robotics",13, covers[0]);
+        Album a = new Album("Reverse Coding",13, covers[0]);
         albumList.add(a);
 
-        a = new Album("Reverse Coding",8, covers[1]);
+        a = new Album("Junkyard Wars",8, covers[1]);
         albumList.add(a);
 
-        a = new Album("Junkyard Wars",11, covers[2]);
-        albumList.add(a);
-
-        a = new Album("Bomb Defuser",12, covers[3]);
+        a = new Album("Bomb Defuser",11, covers[2]);
         albumList.add(a);
 
         adapter.notifyDataSetChanged();

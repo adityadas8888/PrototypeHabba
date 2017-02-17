@@ -67,73 +67,63 @@ public class Intracollege_AlbumsAdapter extends RecyclerView.Adapter<Intracolleg
 
                 switch (position) {
                     case 0:
-                        st=holder.title.getText().toString();
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",17);
+                        i.putExtra("num",16);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
-                        st=holder.title.getText().toString();
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",18);
+                        i1.putExtra("num",17);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
-                        st=holder.title.getText().toString();
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",19);
+                        i2.putExtra("num",18);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
-                        st=holder.title.getText().toString();
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",20);
+                        i3.putExtra("num",19);
                         view.getContext().startActivity(i3);
 
                         break;
                     case 4:
-                        st=holder.title.getText().toString();
                         Intent i4 = new Intent(view.getContext(),Scroll.class);
-                        i4.putExtra("num",21);
+                        i4.putExtra("num",20);
                         view.getContext().startActivity(i4);
 
                         break;
 
                     case 5:
-                        st=holder.title.getText().toString();
                         Intent i5 = new Intent(view.getContext(),Scroll.class);
-                        i5.putExtra("num",22);
+                        i5.putExtra("num",21);
                         view.getContext().startActivity(i5);
 
                         break;
                     case 6:
-                        st=holder.title.getText().toString();
                         Intent i6 = new Intent(view.getContext(),Scroll.class);
-                        i6.putExtra("num",23);
+                        i6.putExtra("num",22);
                         view.getContext().startActivity(i6);
 
                         break;
                     case 7:
-                        st=holder.title.getText().toString();
                         Intent i7 = new Intent(view.getContext(),Scroll.class);
-                        i7.putExtra("num",24);
+                        i7.putExtra("num",23);
                         view.getContext().startActivity(i7);
 
                         break;
                     case 8:
-                        st=holder.title.getText().toString();
                         Intent i8 = new Intent(view.getContext(),Scroll.class);
-                        i8.putExtra("num",25);
+                        i8.putExtra("num",24);
                         view.getContext().startActivity(i8);
 
                         break;
 
                     case 9:
-                        st=holder.title.getText().toString();
                         Intent i9 = new Intent(view.getContext(),Scroll.class);
-                        i9.putExtra("num",26);
+                        i9.putExtra("num",25);
                         view.getContext().startActivity(i9);
 
                         break;

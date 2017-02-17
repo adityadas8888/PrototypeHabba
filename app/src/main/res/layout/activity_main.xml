@@ -3,53 +3,19 @@
     android:background="@android:color/white"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layout_top">
-
-        <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="3dp"-->
-        <!--android:background="#2ea3fe"/>-->
-
-        <FrameLayout
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:background="@android:color/transparent">
-
-            <Button
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:background="@drawable/titlebar_menu_selector"
-                android:id="@+id/title_bar_left_menu"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="10dp"/>
-
-            <Button
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:background="@drawable/titlebar_menu_selector"
-                android:id="@+id/title_bar_right_menu"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="10dp"/>
-        </FrameLayout>
-
-        <View
+    <View
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="#ebebeb"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/main_fragment">
-        </FrameLayout>
-
-    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/main_fragment">
+    </FrameLayout>
 
 </LinearLayout>

@@ -6,10 +6,15 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.aditya.prototypehabba.R;
+import com.example.aditya.prototypehabba.map.Registration.Registration;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,16 +24,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Scroll extends AppCompatActivity {
-    TextView textView;
     String st;
     public String url;
     public int val;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scroll);
         contactList = new ArrayList<>();
+        button = (Button)findViewById(R.id.button3);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent5 = new Intent(Scroll.this,Registration.class);
+                startActivity(intent5);
+            }
+        });
 
         Intent mIntent=getIntent();
         val=mIntent.getIntExtra("num",-1);
@@ -49,8 +61,11 @@ public class Scroll extends AppCompatActivity {
     private static String about;
     private static String rules;
     private static String amount;
+    private static String image;
+    private static String number;
     ArrayList<HashMap<String, String>> contactList;
-    TextView tv1,tv2,tv3,tv4;
+    TextView tv1,tv2,tv3,tv4,tv5;
+    ImageView imageView;
 
 
     protected void onPause(){
@@ -87,6 +102,8 @@ public class Scroll extends AppCompatActivity {
             tv2=(TextView)findViewById(R.id.about);
             tv3=(TextView)findViewById(R.id.rules);
             tv4=(TextView)findViewById(R.id.amount);
+            tv5=(TextView)findViewById(R.id.number);
+            imageView = (ImageView)findViewById(R.id.imageView);
             Log.e(TAG, "Response from url: " + jsonStr);
 
             if (jsonStr != null) {
@@ -100,6 +117,8 @@ public class Scroll extends AppCompatActivity {
                     about = c.getString("about");
                     rules = c.getString("rules");
                     amount = c.getString("amount");
+                    image = c.getString("image");
+                    number = c.getString("number");
 
                     HashMap<String, String> contact = new HashMap<>();
 
@@ -107,6 +126,8 @@ public class Scroll extends AppCompatActivity {
                     contact.put("about", about);
                     contact.put("rules", rules);
                     contact.put("amount", amount);
+                    contact.put("image",image);
+                    contact.put("number",number);
 
                     contactList.add(contact);
 
@@ -153,6 +174,8 @@ public class Scroll extends AppCompatActivity {
                     tv2.setText(about);
                     tv3.setText(rules);
                     tv4.setText(amount);
+                    tv5.setText(number);
+                    Glide.with(getBaseContext()).load(image).into(imageView);
 
                 }
             });

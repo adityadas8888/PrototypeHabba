@@ -120,7 +120,7 @@ public class Miscellaneous extends AppCompatActivity {
         a = new Album("Face Painting", 1, covers[5]);
         albumList.add(a);
 
-        a = new Album("Do it Yourself", 11, covers[6]);
+        a = new Album("Map the Snap", 11, covers[6]);
         albumList.add(a);
 
         a = new Album("Mock CID", 11, covers[7]);

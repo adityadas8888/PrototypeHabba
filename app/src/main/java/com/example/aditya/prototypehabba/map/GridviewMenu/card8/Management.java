@@ -98,7 +98,7 @@ public class Management extends AppCompatActivity {
                 R.drawable.album3
                 };
 
-        Album a = new Album("Management Quiz", 13, covers[0]);
+        Album a = new Album("Karyaneeti", 13, covers[0]);
         albumList.add(a);
 
         a = new Album("Mock IPL", 8, covers[1]);

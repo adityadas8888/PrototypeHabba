@@ -10,7 +10,7 @@
    </style>
 
     <!-- Customize your theme here. -->
-<style name="Base.Theme.AppCompat" parent="Theme.AppCompat.Light.NoActionBar">
+<style name="Base.Theme.AppCompat" parent="Theme.AppCompat.NoActionBar">
 <item name="colorPrimary">#E30D81</item>
 <item name="colorPrimaryDark">#C51162</item>
 <item name="colorAccent">#FF4081</item>

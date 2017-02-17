@@ -9,9 +9,9 @@
     <color name="album_title">#4c4c4c</color>
      <!-- Screens background color-->
         <color name="bg_screen1">#673ab7</color>
-        <color name="bg_screen2">#4caf50</color>
+        <color name="bg_screen2">#219d26</color>
         <color name="bg_screen3">#ffeb3b</color>
-        <color name="bg_screen4">#f44336</color>
+        <color name="bg_screen4">#fb5332</color>
 
         <!-- dots inactive colors -->
         <color name="dot_dark_screen1">#b71c1c</color>
@@ -24,8 +24,9 @@
         <color name="dot_light_screen2">#4db6ac</color>
         <color name="dot_light_screen3">#FFD65c</color>
         <color name="dot_light_screen4">#81d4fa</color>
+    <color name="accent_material_dark_1">#003beb</color>
 
-        <array name="array_dot_active">
+    <array name="array_dot_active">
             <item>@color/dot_light_screen1</item>
             <item>@color/dot_light_screen2</item>
             <item>@color/dot_light_screen3</item>

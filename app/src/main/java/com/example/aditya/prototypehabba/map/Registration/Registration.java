@@ -18,11 +18,13 @@ import com.example.aditya.prototypehabba.R;
 import java.util.HashMap;
 
 
+
+
 public class Registration extends AppCompatActivity implements View.OnClickListener{
 
     private EditText editTextName;
     private EditText editTextUsername;
-    private EditText editTextPassword;
+    private EditText editTextPhone;
     private EditText editTextEmail;
     Spinner s1,s2;
     TextView textView;
@@ -39,11 +41,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextUsername = (EditText) findViewById(R.id.editTextUserName);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        editTextPhone = (EditText) findViewById(R.id.editPhone);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         s1 = (Spinner)findViewById(R.id.spinner);
         s2 = (Spinner)findViewById(R.id.spinner2);
-        textView = (TextView)findViewById(R.id.textView);
 
         s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -56,7 +57,6 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                 s2.setAdapter(spinnerArrayAdapter);
                 String name1 = s2.getSelectedItem().toString();
 
-                textView.setText(name1);
 
             }
 
@@ -81,36 +81,24 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     private void registerUser() {
         String name = editTextName.getText().toString().trim().toLowerCase();
         if( editTextName.getText().toString().trim().equals(""))
-        {
-            editTextName.setError( "First name is required!" );
+            editTextName.setError( "Name is required!" );
 
-            editTextName.setHint("Please enter your name");
-        }
         String clg = editTextUsername.getText().toString().trim().toLowerCase();
 
         if( editTextUsername.getText().toString().trim().equals(""))
-        {
-            editTextUsername.setError( "College name is required!" );
+            editTextUsername.setError( "College's name is required!" );
 
-            editTextUsername.setHint("Please enter your College's name");
-        }
-        String number = editTextPassword.getText().toString().trim().toLowerCase();
+        String number = editTextPhone.getText().toString().trim().toLowerCase();
 
-        if( editTextPassword.getText().toString().trim().equals(""))
-        {
-            editTextPassword.setError( "Phone number is required!" );
+        if( editTextPhone.getText().toString().trim().equals(""))
+            editTextPhone.setError( "Phone number is required!" );
 
-            editTextPassword.setHint("Please enter your phone number");
-        }
         String email = editTextEmail.getText().toString().trim().toLowerCase();
 
         if( editTextEmail.getText().toString().trim().equals(""))
-        {
             editTextEmail.setError( "Email address is required!" );
-
-            editTextEmail.setHint("Please enter your email address");
-        }
         String ctg = s1.getSelectedItem().toString();
+
         String sctg = s2.getSelectedItem().toString();
 
         register(name,clg,number,email,ctg,sctg);

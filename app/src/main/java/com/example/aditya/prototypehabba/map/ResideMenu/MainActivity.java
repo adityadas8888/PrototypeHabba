@@ -2,12 +2,12 @@ package com.example.aditya.prototypehabba.map.ResideMenu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.aditya.prototypehabba.R;
 import com.example.aditya.prototypehabba.map.Calender.Calender;
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setUpMenu();                                                //sets up the side menus
         if( savedInstanceState == null )
             changeFragment(new HomeFragment());//changes the Fragment to home
-        Toast.makeText(getBaseContext(),"Launched",Toast.LENGTH_LONG).show();
     }
 
     private void setUpMenu() {
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         itemMaps = new ResideMenuItem(this,R.drawable.icon_maps, "Maps");
         itemEvents = new ResideMenuItem(this,R.drawable.icon_settings,"Events");
         itemCalendar = new ResideMenuItem(this,R.drawable.icon_calendar,"Calender");
-        itemRegister = new ResideMenuItem(this,R.drawable.icon_profile,"Registration");
+        itemRegister = new ResideMenuItem(this,R.drawable.icon_profile,"Register");
 
         itemHome.setOnClickListener(this);
         itemNotification.setOnClickListener(this);
@@ -72,12 +71,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // You can disable a direction by setting ->
         resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT);
 
-        findViewById(R.id.title_bar_left_menu).setOnClickListener(new View.OnClickListener() {
+      /*  findViewById(R.id.title_bar_left_menu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
             }
-        });
+        });*/
     }
 
     @Override
@@ -94,25 +93,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (view == itemNotification){
             changeFragment(new NotificationsFragment());
         }
-        else if (view ==itemMaps){
-            Toast.makeText(getBaseContext(),"clicked",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this, MapsActivity.class);
-            startActivity(intent);
+        else if (view ==itemMaps) {
 
-        } else if (view ==itemEvents){
-            Toast.makeText(getBaseContext(),"clickedEvents",Toast.LENGTH_SHORT).show();
-            Intent intent1 = new Intent(MainActivity.this, SlideMenu.class);
-            startActivity(intent1);
+            resideMenu.closeMenu();
+
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent1 = new Intent(MainActivity.this, MapsActivity.class);
+                    startActivity(intent1);
+                }
+            }, 400);
+        }
+        else if (view ==itemEvents){
+            resideMenu.closeMenu();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent1 = new Intent(MainActivity.this, SlideMenu.class);
+                    startActivity(intent1);
+                }
+            }, 200);
 
         }
         else if (view ==itemCalendar){
-            Toast.makeText(getBaseContext(),"clickedEvents",Toast.LENGTH_SHORT).show();
-            Intent intent1 = new Intent(MainActivity.this, Calender.class);
-            startActivity(intent1);
+            resideMenu.closeMenu();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent1 = new Intent(MainActivity.this, Calender.class);
+                    startActivity(intent1);
+                }
+            }, 200);
 
         }
         else if (view ==itemRegister){
-            Toast.makeText(getBaseContext(),"clickedEvents",Toast.LENGTH_SHORT).show();
             Intent intent1 = new Intent(MainActivity.this, Registration.class);
             startActivity(intent1);
 
@@ -129,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE)                  //animation of the fragment transition
                 .commit();
     }
-      public ResideMenu getResideMenu(){
+    public ResideMenu getResideMenu(){
         return resideMenu;
     }
 }

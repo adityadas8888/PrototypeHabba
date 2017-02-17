@@ -105,25 +105,22 @@ public class Music extends AppCompatActivity {
         Album a = new Album("Battle of Bands",13, covers[0]);
         albumList.add(a);
 
-        a = new Album("DJ Hunt",8, covers[1]);
+        a = new Album("Solo Singing",11, covers[1]);
         albumList.add(a);
 
-        a = new Album("Solo Singing",11, covers[2]);
+        a = new Album("Beatboxing",12, covers[2]);
         albumList.add(a);
 
-        a = new Album("Beatboxing",12, covers[3]);
+        a = new Album("Antakshari",14, covers[3]);
         albumList.add(a);
 
-        a = new Album("Antakshari",14, covers[4]);
+        a = new Album("Rap Battle",1, covers[4]);
         albumList.add(a);
 
-        a = new Album("Rap Battle",1, covers[5]);
+        a = new Album("Electronic Music Production",11, covers[5]);
         albumList.add(a);
 
-        a = new Album("Electronic Music Production",11, covers[6]);
-        albumList.add(a);
-
-        a = new Album("Mock Rock",14, covers[7]);
+        a = new Album("Mock Rock",14, covers[6]);
         albumList.add(a);
 
         adapter.notifyDataSetChanged();

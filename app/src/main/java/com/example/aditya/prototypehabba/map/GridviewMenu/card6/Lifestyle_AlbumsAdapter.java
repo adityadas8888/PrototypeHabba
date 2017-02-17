@@ -67,22 +67,19 @@ public class Lifestyle_AlbumsAdapter extends RecyclerView.Adapter<Lifestyle_Albu
 
                 switch (position) {
                     case 0:
-                        st=holder.title.getText().toString();
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",27);
+                        i.putExtra("num",26);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
-                        st=holder.title.getText().toString();
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",28);
+                        i1.putExtra("num",27);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
-                        st=holder.title.getText().toString();
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",29);
+                        i2.putExtra("num",28);
                         view.getContext().startActivity(i2);
 
                         break;

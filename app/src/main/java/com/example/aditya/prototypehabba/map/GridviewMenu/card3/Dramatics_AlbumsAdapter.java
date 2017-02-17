@@ -67,22 +67,19 @@ public class Dramatics_AlbumsAdapter extends RecyclerView.Adapter<Dramatics_Albu
 
                 switch (position) {
                     case 0:
-                        st=holder.title.getText().toString();
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",9);
+                        i.putExtra("num",8);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
-                        st=holder.title.getText().toString();
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",10);
+                        i1.putExtra("num",9);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
-                        st=holder.title.getText().toString();
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",11);
+                        i2.putExtra("num",10);
                         view.getContext().startActivity(i2);
 
                 }

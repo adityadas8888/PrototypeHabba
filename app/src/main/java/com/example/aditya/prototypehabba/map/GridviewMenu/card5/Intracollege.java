@@ -104,7 +104,7 @@ public class Intracollege extends AppCompatActivity {
                 R.drawable.album9,
                 R.drawable.album10};
 
-        Album a = new Album("Acharya Got Talent", 13, covers[0]);
+        Album a = new Album("Acharya's Got Talent", 13, covers[0]);
         albumList.add(a);
 
         a = new Album("Mr and Miss Habba", 8, covers[1]);
@@ -131,7 +131,7 @@ public class Intracollege extends AppCompatActivity {
         a = new Album("Treasure-Hunt", 11, covers[8]);
         albumList.add(a);
 
-        a = new Album("Hogathon", 11, covers[8]);
+        a = new Album("Hogathon", 11, covers[9]);
         albumList.add(a);
 
 

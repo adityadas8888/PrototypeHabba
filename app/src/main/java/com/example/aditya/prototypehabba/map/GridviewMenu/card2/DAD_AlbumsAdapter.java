@@ -68,36 +68,31 @@ public class DAD_AlbumsAdapter extends RecyclerView.Adapter<DAD_AlbumsAdapter.My
 
                 switch (position) {
                     case 0:
-                        st=holder.title.getText().toString();
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",4);
+                        i.putExtra("num",3);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
-                        st=holder.title.getText().toString();
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",5);
+                        i1.putExtra("num",4);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
-                        st=holder.title.getText().toString();
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",6);
+                        i2.putExtra("num",5);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
-                        st=holder.title.getText().toString();
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",7);
+                        i3.putExtra("num",6);
                         view.getContext().startActivity(i3);
 
                         break;
                     case 4:
-                        st=holder.title.getText().toString();
                         Intent i4 = new Intent(view.getContext(),Scroll.class);
-                        i4.putExtra("num",8);
+                        i4.putExtra("num",7);
                         view.getContext().startActivity(i4);
 
                         break;

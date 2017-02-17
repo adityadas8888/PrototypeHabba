@@ -111,7 +111,7 @@ public class Design_and_Digital_Arts extends AppCompatActivity {
         a = new Album("Sketching", 12, covers[3]);
         albumList.add(a);
 
-        a = new Album("Painting", 14, covers[4]);
+        a = new Album("Creative Painting", 14, covers[4]);
         albumList.add(a);
 
 
