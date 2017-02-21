@@ -36,6 +36,7 @@ public class Music extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gridviewmenu); //change here
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
         if (com) {
@@ -85,7 +86,7 @@ public class Music extends AppCompatActivity {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.mipmap.cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,13 +129,13 @@ public class Music extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.bob,
-                R.drawable.sing,
-                R.drawable.bb,
-                R.drawable.antak,
-                R.drawable.rap,
-                R.drawable.edm,
-                R.drawable.mock,
+                R.mipmap.bob,
+                R.mipmap.sing,
+                R.mipmap.bb,
+                R.mipmap.antak,
+                R.mipmap.rap,
+                R.mipmap.edm,
+                R.mipmap.mock,
         };
 
         Album a = new Album("Battle of Bands",13, covers[0]);
@@ -205,5 +206,13 @@ public class Music extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
     }
 }

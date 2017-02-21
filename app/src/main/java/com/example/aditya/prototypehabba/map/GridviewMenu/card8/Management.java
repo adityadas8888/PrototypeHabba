@@ -35,6 +35,7 @@ public class Management extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         setContentView(R.layout.gridviewmenu); //change here
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
@@ -85,7 +86,7 @@ public class Management extends AppCompatActivity {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.mipmap.cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,9 +129,9 @@ public class Management extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.karya,
-                R.drawable.mock,
-                R.drawable.marketmayhem
+                R.mipmap.karya,
+                R.mipmap.mock,
+                R.mipmap.marketmayhem
                 };
 
         Album a = new Album("Karyaneeti", 13, covers[0]);
@@ -189,5 +190,13 @@ public class Management extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
     }
 }

@@ -35,6 +35,8 @@ public class Intracollege extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gridviewmenu); //change here
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
         if (com) {
@@ -84,7 +86,7 @@ public class Intracollege extends AppCompatActivity {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.mipmap.cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -127,15 +129,16 @@ public class Intracollege extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.agt,
-                R.drawable.mr_ms,
-                R.drawable.lagori,
-                R.drawable.slowbike,
-                R.drawable.rangoli,
-                R.drawable.matki,
-                R.drawable.bbs,
-                R.drawable.thunt,
-                R.drawable.kavyaair
+                R.mipmap.agt,
+                R.mipmap.mr_ms,
+                R.mipmap.lagori,
+                R.mipmap.slowbike,
+                R.mipmap.rangoli,
+                R.mipmap.matki,
+                R.mipmap.bbs,
+                R.mipmap.thunt,
+                R.mipmap.kavyaair,
+                R.mipmap.choreo
                 };
 
         Album a = new Album("Acharya's Got Talent", 13, covers[0]);
@@ -164,6 +167,7 @@ public class Intracollege extends AppCompatActivity {
 
         a = new Album("Open Air", 11, covers[8]);
         albumList.add(a);
+
 
         adapter.notifyDataSetChanged();
     }
@@ -212,5 +216,13 @@ public class Intracollege extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
     }
 }

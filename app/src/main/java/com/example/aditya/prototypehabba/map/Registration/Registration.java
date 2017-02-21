@@ -34,6 +34,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
         if (com) {
@@ -171,5 +172,11 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
         RegisterUser ru = new RegisterUser();
         ru.execute(name,clg,number,email,ctg,sctg);
+    }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        finish();
     }
 }

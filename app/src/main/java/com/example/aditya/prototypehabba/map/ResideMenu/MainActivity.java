@@ -6,15 +6,17 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.aditya.prototypehabba.R;
-import com.example.aditya.prototypehabba.map.Calender.Calender;
+import com.example.aditya.prototypehabba.map.Calender.Calendar;
 import com.example.aditya.prototypehabba.map.Map.MapsActivity;
 import com.example.aditya.prototypehabba.map.Notification.NotificationsFragment;
 import com.example.aditya.prototypehabba.map.Registration.Registration;
@@ -26,12 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ResideMenu resideMenu;
     private ResideMenuItem itemDeveloper,itemRegister,itemEvents,itemMaps,itemAbout,itemCalendar,itemNotification;
-
+    private static long back_pressed;
     private boolean com;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        overridePendingTransition(R.anim.slide_in_left_fast,R.anim.slide_out_right_fast);
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
         if (com) {
@@ -72,19 +75,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         resideMenu = new ResideMenu(this);                             // attach to current activity;
-        resideMenu.setBackground(R.drawable.menu_background);           //set the background
+        resideMenu.setBackground(R.mipmap.menu_background);           //set the background
         resideMenu.attachToActivity(this);
         // resideMenu.setMenuListener(menuListener);                     //makes toast:not required
         resideMenu.setScaleValue(0.6f);                                   //valid scale factor is between 0.0f and 1.0f. leftmenu'width is 150dip.
 
         // create menu items;
-        itemAbout = new ResideMenuItem(this, R.drawable.info,"About Us");              //sets the menu pictures
-        itemNotification = new ResideMenuItem(this, R.drawable.feed, "Feed");
-        itemMaps = new ResideMenuItem(this,R.drawable.maps_thin, "Maps");
-        itemEvents = new ResideMenuItem(this,R.drawable.event,"Events");
-        itemCalendar = new ResideMenuItem(this,R.drawable.icon_calendar,"Calender");
-        itemRegister = new ResideMenuItem(this,R.drawable.icon_profile,"Register");
-        itemDeveloper = new ResideMenuItem(this,R.drawable.people,"Devs");
+        itemAbout = new ResideMenuItem(this, R.mipmap.info,"About Us");              //sets the menu pictures
+        itemNotification = new ResideMenuItem(this, R.mipmap.feed, "Feed");
+        itemMaps = new ResideMenuItem(this,R.mipmap.maps_thin, "Maps");
+        itemEvents = new ResideMenuItem(this,R.mipmap.event,"Events");
+        itemCalendar = new ResideMenuItem(this,R.mipmap.icon_calendar,"Calender");
+        itemRegister = new ResideMenuItem(this,R.mipmap.icon_profile,"Register");
+        itemDeveloper = new ResideMenuItem(this,R.mipmap.people,"Devs");
         itemAbout.setOnClickListener(this);
         itemNotification.setOnClickListener(this);
         itemMaps.setOnClickListener(this);
@@ -163,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 public void run() {
                     Intent intent1 = new Intent(MainActivity.this, SlideMenu.class);
                     startActivity(intent1);
+                    finish();
                 }
             }, 200);
 
@@ -173,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent1 = new Intent(MainActivity.this, Calender.class);
+                    Intent intent1 = new Intent(MainActivity.this,Calendar.class);
                     startActivity(intent1);
                 }
             }, 200);
@@ -198,6 +202,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public ResideMenu getResideMenu(){
         return resideMenu;
+    }
+    @Override
+    public void onBackPressed()
+    {
+        if(back_pressed +2000 >System.currentTimeMillis()) {
+            super.onBackPressed();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Press back again to exit ",Toast.LENGTH_SHORT).show();
+            back_pressed = System.currentTimeMillis();
+        }
     }
 }
 

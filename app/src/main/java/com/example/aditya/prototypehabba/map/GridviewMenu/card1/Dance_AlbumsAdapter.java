@@ -78,7 +78,12 @@ public class Dance_AlbumsAdapter extends RecyclerView.Adapter<Dance_AlbumsAdapte
 
                         break;
 
-                }
+//                    case 2:
+//                        Intent i2 = new Intent(view.getContext(),Scroll.class);
+//                        i2.putExtra("num",55);
+//                        view.getContext().startActivity(i2);
+//                        break;
+                     }
 
 
             }

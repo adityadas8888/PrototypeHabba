@@ -1,10 +1,12 @@
 package com.example.aditya.prototypehabba.map.Scroll;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -29,6 +31,13 @@ public class Scroll extends AppCompatActivity {
     public int val;
     Button button;
     boolean com;
+    private static String name;
+    private static String about;
+    private static String rules;
+    private static String amount;
+    private static String image;
+    private static String number;
+    private static String ename;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,14 +98,9 @@ public class Scroll extends AppCompatActivity {
     // URL to get contacts JSON
 
 
-    private static String name;
-    private static String about;
-    private static String rules;
-    private static String amount;
-    private static String image;
-    private static String number;
+
     ArrayList<HashMap<String, String>> contactList;
-    TextView tv1,tv2,tv3,tv4,tv5;
+    TextView tv1,tv2,tv3,tv4,tv5,tv6;
     ImageView imageView;
 
 
@@ -135,6 +139,7 @@ private class GetContacts extends AsyncTask<Void, Void, Void> {
         tv3=(TextView)findViewById(R.id.rules);
         tv4=(TextView)findViewById(R.id.amount);
         tv5=(TextView)findViewById(R.id.number);
+        tv6=(TextView)findViewById(R.id.ename);
         imageView = (ImageView)findViewById(R.id.imageView);
         Log.e(TAG, "Response from url: " + jsonStr);
 
@@ -151,6 +156,7 @@ private class GetContacts extends AsyncTask<Void, Void, Void> {
                 amount = c.getString("amount");
                 image = c.getString("image");
                 number = c.getString("number");
+                ename=c.getString("eventhead");
 
                 HashMap<String, String> contact = new HashMap<>();
 
@@ -160,6 +166,7 @@ private class GetContacts extends AsyncTask<Void, Void, Void> {
                 contact.put("amount", amount);
                 contact.put("image",image);
                 contact.put("number",number);
+                contact.put("eventhead", ename);
 
                 contactList.add(contact);
 
@@ -207,11 +214,30 @@ private class GetContacts extends AsyncTask<Void, Void, Void> {
                 tv3.setText(rules);
                 tv4.setText(amount);
                 tv5.setText(number);
+                tv6.setText(ename);
                 Glide.with(getBaseContext()).load(image).into(imageView);
 
             }
         });
     }
 
+
 }
-}
+    public void caller(View view){
+        try {
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:"+number));
+            this.startActivity(callIntent);
+        } catch (ActivityNotFoundException activityException) {
+            Toast.makeText(getApplicationContext(), "Call has failed", Toast.LENGTH_LONG).show();
+        }
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
+    }
+    }

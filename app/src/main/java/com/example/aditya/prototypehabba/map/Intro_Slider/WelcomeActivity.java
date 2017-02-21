@@ -1,5 +1,4 @@
 package com.example.aditya.prototypehabba.map.Intro_Slider;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,10 +16,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.aditya.prototypehabba.R;
 import com.example.aditya.prototypehabba.map.ResideMenu.MainActivity;
+
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -49,7 +48,7 @@ public class WelcomeActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_welcome);
-
+        overridePendingTransition(R.anim.slide_in_left_fast,R.anim.slide_out_right_fast);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
@@ -123,7 +122,6 @@ public class WelcomeActivity extends AppCompatActivity {
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
         startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-        Toast.makeText(getBaseContext(),"Clicked",Toast.LENGTH_SHORT).show();
         finish();
     }
 

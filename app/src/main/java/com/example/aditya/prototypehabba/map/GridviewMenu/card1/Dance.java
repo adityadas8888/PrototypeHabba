@@ -84,7 +84,7 @@ public class Dance extends AppCompatActivity {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.mipmap.cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -127,8 +127,9 @@ public class Dance extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.choreo,
-                R.drawable.solo,
+                R.mipmap.choreo,
+                R.mipmap.solo,
+              //  R.mipmap.intra,
                 };
 
         Album a = new Album("Choreonight",13, covers[0]);
@@ -137,6 +138,8 @@ public class Dance extends AppCompatActivity {
         a = new Album("Solo Dance", 8, covers[1]);
         albumList.add(a);
 
+     //   a = new Album("Intra-Dance",9,covers[2]);
+       // albumList.add(a);
         adapter.notifyDataSetChanged();
     }
 
@@ -184,5 +187,13 @@ public class Dance extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
     }
 }

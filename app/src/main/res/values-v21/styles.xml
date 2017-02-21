@@ -8,7 +8,7 @@
         <item name="android:colorAccent">@android:color/primary_text_light</item>
     </style>
 
-    <style name="Custom" parent="android:Theme.Material.Wallpaper.NoTitleBar" >
+    <style name="Custom" parent="android:Theme.Material.Wallpaper.NoTitleBar">
         <item name="android:colorAccent">@color/bg_screen4</item>
     </style>
 </resources>

@@ -3,8 +3,8 @@ package com.example.aditya.prototypehabba.map.Intro_Slider;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by Lincoln on 05/05/16.
+/*
+ * Created by Aditya
  */
 public class PrefManager {
     SharedPreferences pref;

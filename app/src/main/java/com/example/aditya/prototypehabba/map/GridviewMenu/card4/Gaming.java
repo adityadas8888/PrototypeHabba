@@ -35,6 +35,8 @@ public class Gaming extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gridviewmenu); //change here
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
         if (com) {
@@ -84,7 +86,7 @@ public class Gaming extends AppCompatActivity {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.mipmap.cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -127,11 +129,11 @@ public class Gaming extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.dota,
-                R.drawable.cs,
-                R.drawable.nfsmw,
-                R.drawable.fifa15,
-                R.drawable.cod4,
+                R.mipmap.dota,
+                R.mipmap.cs,
+                R.mipmap.nfsmw,
+                R.mipmap.fifa15,
+                R.mipmap.cod4,
                 };
 
         Album a = new Album("DOTA 2", 13, covers[0]);
@@ -197,5 +199,13 @@ public class Gaming extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
     }
 }

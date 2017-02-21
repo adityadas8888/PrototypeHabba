@@ -1,26 +1,25 @@
 <resources>
 
     <!-- Base application theme. -->
-   <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">>
-       <item name="colorPrimary">@color/colorPrimary</item>
-       <item name="colorPrimaryDark">@color/colorPrimary</item>
-       <item name="colorAccent">
-           @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
-       </item>
-       <item name="android:windowContentTransitions">true</item>
-   </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">
+            @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
+        </item>
+    </style>
 
     <!-- Customize your theme here. -->
-<style name="Base.Theme.AppCompat" parent="Theme.AppCompat.NoActionBar">
-<item name="colorPrimary">#E30D81</item>
-<item name="colorPrimaryDark">#C51162</item>
-<item name="colorAccent">#FF4081</item>
-</style>
+    <style name="Base.Theme.AppCompat" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#E30D81</item>
+        <item name="colorPrimaryDark">#C51162</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
 
-<style name="fragment_text">
-<item name="android:textColor">#ffacacac</item>
-<item name="android:textSize">25sp</item>
-</style>
+    <style name="fragment_text">
+        <item name="android:textColor">#ffacacac</item>
+        <item name="android:textSize">25sp</item>
+    </style>
 
     <style name="Black_Orange" parent="AppTheme" />
 

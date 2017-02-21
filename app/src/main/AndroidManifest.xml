@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -52,11 +54,12 @@
         <activity android:name=".map.GridviewMenu.card9.Miscellaneous" />
         <activity android:name=".map.GridviewMenu.card10.Music" />
         <activity android:name=".map.GridviewMenu.card11.Technical" />
-        <activity android:name=".map.Map.MapsActivity"/>
-        <activity android:name=".map.Calender.Calender" />
-        <activity android:name=".map.About.about">
-         </activity>
-        <activity android:name=".map.Notification.NotificationsFragment"/>
+        <activity android:name=".map.Map.MapsActivity" />
+        <activity android:name=".map.Notification.NotificationsFragment" />
+        <activity
+            android:name=".map.Calender.Calendar"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

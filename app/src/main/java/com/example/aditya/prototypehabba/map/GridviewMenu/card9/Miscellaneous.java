@@ -35,7 +35,8 @@ public class Miscellaneous extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gridviewmenu); //change here
+        setContentView(R.layout.gridviewmenu);
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
         com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
         if (com) {
@@ -85,7 +86,7 @@ public class Miscellaneous extends AppCompatActivity {
         prepareAlbums();
 
         try {
-            Glide.with(this).load(R.drawable.cover).into((ImageView) findViewById(R.id.backdrop));
+            Glide.with(this).load(R.mipmap.cover).into((ImageView) findViewById(R.id.backdrop));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -128,17 +129,17 @@ public class Miscellaneous extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.habbathon,
-                R.drawable.tug,
-                R.drawable.superm,
-                R.drawable.chef,
-                R.drawable.nail,
-                R.drawable.facepaint,
-                R.drawable.mts,
-                R.drawable.cid,
-                R.drawable.foood};
+                R.mipmap.habbathon,
+                R.mipmap.tug,
+                R.mipmap.superm,
+                R.mipmap.chef,
+                R.mipmap.nail,
+                R.mipmap.facepaint,
+                R.mipmap.mts,
+                R.mipmap.cid,
+                R.mipmap.foood};
 
-        Album a = new Album("Cube-on", 13, covers[0]);
+        Album a = new Album("Habbathon", 13, covers[0]);
         albumList.add(a);
 
         a = new Album("Tug of War", 8, covers[1]);//
@@ -211,5 +212,13 @@ public class Miscellaneous extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+    @Override
+    public void onBackPressed()
+    {
+
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
+        super.onBackPressed();
+        finish();
     }
 }

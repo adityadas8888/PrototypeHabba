@@ -103,5 +103,6 @@
     <string-array name="Cinematics">
         <item>252120</item>
     </string-array>
+    <string name="title_activity_calendar">Calendar</string>
 
 </resources>
