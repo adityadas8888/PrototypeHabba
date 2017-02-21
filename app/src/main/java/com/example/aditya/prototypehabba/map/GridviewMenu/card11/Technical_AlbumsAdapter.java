@@ -68,18 +68,18 @@ public class Technical_AlbumsAdapter extends RecyclerView.Adapter<Technical_Albu
                 switch (position) {
                     case 0:
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",51);
+                        i.putExtra("num",50);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",52);
+                        i1.putExtra("num",51);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",53);
+                        i2.putExtra("num",52);
                         view.getContext().startActivity(i2);
 
                         break;

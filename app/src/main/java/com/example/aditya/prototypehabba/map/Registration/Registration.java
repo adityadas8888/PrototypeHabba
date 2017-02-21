@@ -1,8 +1,13 @@
 package com.example.aditya.prototypehabba.map.Registration;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,15 +15,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.aditya.prototypehabba.R;
-
 import java.util.HashMap;
-
-
-
 
 public class Registration extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,18 +26,44 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     private EditText editTextPhone;
     private EditText editTextEmail;
     Spinner s1,s2;
-    TextView textView;
-
+    boolean com;
     private Button buttonRegister;
-
-    private static final String REGISTER_URL = "http://theprince.96.lt//android/register.php";
-
+    private static final String REGISTER_URL = "http://acharyahabba.in/app/register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
+        com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
+        if (com) {
+        }
+        else {
 
+
+            AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(
+                    Registration.this);
+            alertDialog2.setTitle("OOPS LOST CONNECTION");
+
+            alertDialog2.setMessage("LOOKS LIKE THE INTERNET AND I ARENT TALKING ANYMORE..");
+            alertDialog2.setPositiveButton("GO TO SETTINGS ",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+                        }
+                    });
+
+            alertDialog2.setNegativeButton("EXIT",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            System.exit(0);
+                        }
+                    });
+
+            alertDialog2.show();
+
+        }
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextUsername = (EditText) findViewById(R.id.editTextUserName);
         editTextPhone = (EditText) findViewById(R.id.editPhone);
@@ -121,6 +146,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                 super.onPostExecute(s);
                 loading.dismiss();
                 Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+                editTextEmail.getText().clear();
+                editTextName.getText().clear();
+                editTextPhone.getText().clear();
+                editTextUsername.getText().clear();
             }
 
             @Override

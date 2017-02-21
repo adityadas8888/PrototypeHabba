@@ -7,6 +7,7 @@
        <item name="colorAccent">
            @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
        </item>
+       <item name="android:windowContentTransitions">true</item>
    </style>
 
     <!-- Customize your theme here. -->

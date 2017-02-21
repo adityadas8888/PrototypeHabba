@@ -68,18 +68,18 @@ public class Miscellaneous_AlbumsAdapter extends RecyclerView.Adapter<Miscellane
                 switch (position) {
                     case 0:
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",36);
+                        i.putExtra("num",41);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",37);
+                        i1.putExtra("num",35);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",38);
+                        i2.putExtra("num",34);
                         view.getContext().startActivity(i2);
 
                         break;
@@ -91,28 +91,35 @@ public class Miscellaneous_AlbumsAdapter extends RecyclerView.Adapter<Miscellane
                         break;
                     case 4:
                         Intent i4 = new Intent(view.getContext(),Scroll.class);
-                        i4.putExtra("num",40);
+                        i4.putExtra("num",38);
                         view.getContext().startActivity(i4);
 
                         break;
 
                     case 5:
                         Intent i5 = new Intent(view.getContext(),Scroll.class);
-                        i5.putExtra("num",41);
+                        i5.putExtra("num",37);
                         view.getContext().startActivity(i5);
 
                         break;
                     case 6:
                         Intent i6 = new Intent(view.getContext(),Scroll.class);
-                        i6.putExtra("num",42);
+                        i6.putExtra("num",36);
                         view.getContext().startActivity(i6);
 
                         break;
 
                     case 7:
                         Intent i7 = new Intent(view.getContext(),Scroll.class);
-                        i7.putExtra("num",43);
+                        i7.putExtra("num",40);
                         view.getContext().startActivity(i7);
+
+                        break;
+
+                    case 8:
+                        Intent i8 = new Intent(view.getContext(),Scroll.class);
+                        i8.putExtra("num",53);
+                        view.getContext().startActivity(i8);
 
                         break;
 

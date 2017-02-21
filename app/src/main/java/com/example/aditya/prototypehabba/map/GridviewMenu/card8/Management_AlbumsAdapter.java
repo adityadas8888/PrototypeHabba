@@ -68,18 +68,18 @@ public class Management_AlbumsAdapter extends RecyclerView.Adapter<Management_Al
                 switch (position) {
                     case 0:
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",33);
+                        i.putExtra("num",31);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",34);
+                        i1.putExtra("num",32);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",35);
+                        i2.putExtra("num",33);
                         view.getContext().startActivity(i2);
 
                         break;

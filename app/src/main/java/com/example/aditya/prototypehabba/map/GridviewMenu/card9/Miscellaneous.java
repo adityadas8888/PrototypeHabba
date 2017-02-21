@@ -1,10 +1,15 @@
 package com.example.aditya.prototypehabba.map.GridviewMenu.card9;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -26,11 +31,41 @@ public class Miscellaneous extends AppCompatActivity {
     private RecyclerView recyclerView;
     private Miscellaneous_AlbumsAdapter adapter;
     private List<Album> albumList;
-
+    boolean com;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gridviewmenu); //change here
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
+        com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
+        if (com) {
+        }
+        else {
+
+
+            AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(
+                    Miscellaneous.this);
+            alertDialog2.setTitle("OOPS LOST CONNECTION");
+            alertDialog2.setCancelable(false);
+            alertDialog2.setMessage("LOOKS LIKE THE INTERNET AND I ARENT TALKING ANYMORE..");
+            alertDialog2.setPositiveButton("GO TO SETTINGS ",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+                        }
+                    });
+
+            alertDialog2.setNegativeButton("EXIT",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            System.exit(0);
+                        }
+                    });
+
+            alertDialog2.show();
+
+        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -93,37 +128,41 @@ public class Miscellaneous extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.album1,
-                R.drawable.album2,
-                R.drawable.album3,
-                R.drawable.album4,
-                R.drawable.album5,
-                R.drawable.album6,
-                R.drawable.album7,
-                R.drawable.album8};
+                R.drawable.habbathon,
+                R.drawable.tug,
+                R.drawable.superm,
+                R.drawable.chef,
+                R.drawable.nail,
+                R.drawable.facepaint,
+                R.drawable.mts,
+                R.drawable.cid,
+                R.drawable.foood};
 
-        Album a = new Album("Stand-Up Comedy", 13, covers[0]);
+        Album a = new Album("Cube-on", 13, covers[0]);
         albumList.add(a);
 
-        a = new Album("Tug of War", 8, covers[1]);
+        a = new Album("Tug of War", 8, covers[1]);//
         albumList.add(a);
 
-        a = new Album("Super Minute", 11, covers[2]);
+        a = new Album("Super Minute", 11, covers[2]);//
         albumList.add(a);
 
-        a = new Album("Master Chef", 12, covers[3]);
+        a = new Album("Master Chef", 12, covers[3]);//
         albumList.add(a);
 
-        a = new Album("Nail-Art", 14, covers[4]);
+        a = new Album("Nail-Art", 14, covers[4]);//
         albumList.add(a);
 
-        a = new Album("Face Painting", 1, covers[5]);
+        a = new Album("Face Painting", 1, covers[5]);//
         albumList.add(a);
 
-        a = new Album("Map the Snap", 11, covers[6]);
+        a = new Album("Map the Snap", 11, covers[6]);//
         albumList.add(a);
 
-        a = new Album("Mock CID", 11, covers[7]);
+        a = new Album("Mock CID", 11, covers[7]);//
+        albumList.add(a);
+
+        a = new Album("Hog-a-thon", 11, covers[8]);//
         albumList.add(a);
         adapter.notifyDataSetChanged();
     }

@@ -73,19 +73,19 @@ public class Literary_AlbumsAdapter extends RecyclerView.Adapter<Literary_Albums
                         break;
                     case 1:
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",30);
+                        i1.putExtra("num",27);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",31);
+                        i2.putExtra("num",28);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",32);
+                        i3.putExtra("num",30);
                         view.getContext().startActivity(i3);
 
                         break;

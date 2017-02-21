@@ -1,10 +1,15 @@
 package com.example.aditya.prototypehabba.map.GridviewMenu.card1;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -13,11 +18,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bumptech.glide.Glide;
 import com.example.aditya.prototypehabba.R;
 import com.example.aditya.prototypehabba.map.GridviewMenu.Album;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,11 +29,42 @@ public class Dance extends AppCompatActivity {
     private RecyclerView recyclerView;
     private Dance_AlbumsAdapter adapter;
     private List<Album> albumList;
-
+    boolean com;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gridviewmenu); //change here
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE));
+        com = (connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnectedOrConnecting());
+        if (com) {
+        }
+        else {
+
+
+            AlertDialog.Builder alertDialog2 = new AlertDialog.Builder(
+                    Dance.this);
+            alertDialog2.setTitle("OOPS LOST CONNECTION");
+
+            alertDialog2.setMessage("LOOKS LIKE THE INTERNET AND I ARENT TALKING ANYMORE..");
+            alertDialog2.setPositiveButton("GO TO SETTINGS ",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+                        }
+                    });
+
+            alertDialog2.setNegativeButton("EXIT",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            System.exit(0);
+                        }
+                    });
+
+            alertDialog2.show();
+
+        }
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -93,11 +127,11 @@ public class Dance extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.album1,
-                R.drawable.album2,
+                R.drawable.choreo,
+                R.drawable.solo,
                 };
 
-        Album a = new Album("Choreonight", 13, covers[0]);
+        Album a = new Album("Choreonight",13, covers[0]);
         albumList.add(a);
 
         a = new Album("Solo Dance", 8, covers[1]);

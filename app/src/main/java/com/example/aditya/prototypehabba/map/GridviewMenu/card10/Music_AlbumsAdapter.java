@@ -68,30 +68,30 @@ public class Music_AlbumsAdapter extends RecyclerView.Adapter<Music_AlbumsAdapte
                 switch (position) {
                     case 0:
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",44);
+                        i.putExtra("num",45);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",45);
+                        i1.putExtra("num",46);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",46);
+                        i2.putExtra("num",43);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",47);
+                        i3.putExtra("num",44);
                         view.getContext().startActivity(i3);
 
                         break;
                     case 4:
                         Intent i4 = new Intent(view.getContext(),Scroll.class);
-                        i4.putExtra("num",48);
+                        i4.putExtra("num",47);
                         view.getContext().startActivity(i4);
 
                         break;
@@ -104,7 +104,7 @@ public class Music_AlbumsAdapter extends RecyclerView.Adapter<Music_AlbumsAdapte
                         break;
                     case 6:
                         Intent i6 = new Intent(view.getContext(),Scroll.class);
-                        i6.putExtra("num",50);
+                        i6.putExtra("num",48);
                         view.getContext().startActivity(i6);
 
                         break;

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@mipmap/menu_background"
+    android:background="@drawable/menu_background"
     >
 <FrameLayout
     android:layout_width="match_parent"
@@ -23,7 +23,7 @@
     <Button
         android:layout_width="50dp"
         android:id="@+id/button2"
-        android:background="@mipmap/homeic"
+        android:background="@drawable/homeic"
         android:layout_gravity="right|bottom"
         android:layout_marginBottom="25dp"
         android:layout_marginRight="25dp"

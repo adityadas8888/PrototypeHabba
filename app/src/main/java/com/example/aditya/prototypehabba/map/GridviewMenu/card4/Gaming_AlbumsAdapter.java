@@ -68,30 +68,30 @@ public class Gaming_AlbumsAdapter extends RecyclerView.Adapter<Gaming_AlbumsAdap
                 switch (position) {
                     case 0:
                         Intent i = new Intent(view.getContext(),Scroll.class);
-                        i.putExtra("num",11);
+                        i.putExtra("num",15);
                         view.getContext().startActivity(i);
                         break;
                     case 1:
                         Intent i1 = new Intent(view.getContext(),Scroll.class);
-                        i1.putExtra("num",12);
+                        i1.putExtra("num",13);
                         view.getContext().startActivity(i1);
 
                         break;
                     case 2:
                         Intent i2 = new Intent(view.getContext(),Scroll.class);
-                        i2.putExtra("num",13);
+                        i2.putExtra("num",12);
                         view.getContext().startActivity(i2);
 
                         break;
                     case 3:
                         Intent i3 = new Intent(view.getContext(),Scroll.class);
-                        i3.putExtra("num",14);
+                        i3.putExtra("num",11);
                         view.getContext().startActivity(i3);
 
                         break;
                     case 4:
                         Intent i4 = new Intent(view.getContext(),Scroll.class);
-                        i4.putExtra("num",15);
+                        i4.putExtra("num",14);
                         view.getContext().startActivity(i4);
 
                         break;
