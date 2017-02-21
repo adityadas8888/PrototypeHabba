@@ -56,10 +56,13 @@
         <activity android:name=".map.GridviewMenu.card11.Technical" />
         <activity android:name=".map.Map.MapsActivity" />
         <activity android:name=".map.Notification.NotificationsFragment" />
+        <activity android:name=".map.Devs.Devs"/>
+        <activity android:name=".map.Splash.MainSplash"/>
+        <activity android:name=".map.Splash.SplashIdea"/>
         <activity
             android:name=".map.Calender.Calendar"
             android:label="@string/title_activity_calendar"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

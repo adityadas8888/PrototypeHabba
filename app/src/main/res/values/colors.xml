@@ -18,7 +18,8 @@
         <color name="dot_dark_screen2">#00695c</color>
         <color name="dot_dark_screen3">#D19D00</color>
         <color name="dot_dark_screen4">#01579b</color>
-
+        <color name="white">#ffffff</color>
+        <color name="black">#000000</color>
         <!-- dots active colors -->
         <color name="dot_light_screen1">#ef9a9a</color>
         <color name="dot_light_screen2">#4db6ac</color>
@@ -38,5 +39,6 @@
             <item>@color/dot_dark_screen2</item>
             <item>@color/dot_dark_screen3</item>
             <item>@color/dot_dark_screen4</item>
+
         </array>
 </resources>

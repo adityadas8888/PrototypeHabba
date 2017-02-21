@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
@@ -17,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.aditya.prototypehabba.R;
 import com.example.aditya.prototypehabba.map.Calender.Calendar;
+import com.example.aditya.prototypehabba.map.Devs.Devs;
 import com.example.aditya.prototypehabba.map.Map.MapsActivity;
 import com.example.aditya.prototypehabba.map.Notification.NotificationsFragment;
 import com.example.aditya.prototypehabba.map.Registration.Registration;
@@ -187,6 +187,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent1 = new Intent(MainActivity.this, Registration.class);
             startActivity(intent1);
 
+        }
+        else if (view == itemDeveloper)
+        {
+            Intent intent2 = new Intent(MainActivity.this, Devs.class);
+            startActivity(intent2);
         }
 
 
