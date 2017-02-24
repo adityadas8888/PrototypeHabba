@@ -7,6 +7,7 @@
     <color name="accent_color">#ffffff</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
+    <color name="clear">#99000000</color>
      <!-- Screens background color-->
         <color name="bg_screen1">#673ab7</color>
         <color name="bg_screen2">#219d26</color>

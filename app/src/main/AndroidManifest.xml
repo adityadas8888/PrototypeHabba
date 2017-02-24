@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aditya.prototypehabba">
+    package="com.codefive.adichi.myapplication">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -17,8 +17,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+
+        android:theme="@style/AppTheme"
+        >
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -32,35 +33,59 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBceBq_-ZO7qB_z0oTVmt3xB7uSjBZS5pA " />
 
-        <activity android:name=".map.Intro_Slider.WelcomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".map.ResideMenu.MainActivity" />
-        <activity android:name=".map.Registration.Registration" />
-        <activity android:name=".map.SlideMenu.SlideMenu" />
-        <activity android:name=".map.Scroll.Scroll" />
-        <activity android:name=".map.GridviewMenu.card1.Dance" />
-        <activity android:name=".map.GridviewMenu.card2.Design_and_Digital_Arts" />
-        <activity android:name=".map.GridviewMenu.card3.Dramatics" />
-        <activity android:name=".map.GridviewMenu.card4.Gaming" />
-        <activity android:name=".map.GridviewMenu.card5.Intracollege" />
-        <activity android:name=".map.GridviewMenu.card6.Lifestyle" />
-        <activity android:name=".map.GridviewMenu.card8.Management" />
-        <activity android:name=".map.GridviewMenu.card7.Literary" />
-        <activity android:name=".map.GridviewMenu.card9.Miscellaneous" />
-        <activity android:name=".map.GridviewMenu.card10.Music" />
-        <activity android:name=".map.GridviewMenu.card11.Technical" />
-        <activity android:name=".map.Map.MapsActivity" />
-        <activity android:name=".map.Notification.NotificationsFragment" />
-        <activity android:name=".map.Devs.Devs"/>
-        <activity android:name=".map.Splash.MainSplash"/>
-        <activity android:name=".map.Splash.SplashIdea"/>
+       <activity android:name="com.codefive.adichi.myapplication.map.Splash.MainSplash"
+           android:screenOrientation="portrait">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+       </activity>
+        <activity android:name="com.codefive.adichi.myapplication.map.Intro_Slider.WelcomeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.codefive.adichi.myapplication.map.ResideMenu.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.Registration.Registration"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.SlideMenu.SlideMenu"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.Scroll.Scroll"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card1.Dance"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card2.Design_and_Digital_Arts"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card3.Dramatics"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card4.Gaming"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card5.Intracollege"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card6.Lifestyle"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card8.Management"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card7.Literary"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card9.Miscellaneous"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card10.Music"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.GridviewMenu.card11.Technical"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.Map.MapsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.Notification.NotificationsFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.Devs.Devs"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.codefive.adichi.myapplication.map.Splash.SplashIdea"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".map.Calender.Calendar"
+            android:name="com.codefive.adichi.myapplication.map.Calender.Calendar"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_calendar"
             android:theme="@style/AppTheme" />
     </application>

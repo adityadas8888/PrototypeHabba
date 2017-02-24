@@ -4,8 +4,8 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.example.aditya.prototypehabba"
-        minSdkVersion 17
+        applicationId "com.codefive.adichi.myapplication"
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,6 +17,18 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    signingConfigs{
+        release{
+            storeFile file('C:\\Users\\adity\\Desktop\\KEY.jks')
+            storePassword 'adityadas'
+            keyAlias 'code 5'
+            keyPassword 'adityadas'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PrototypeHabba</string>
+    <string name="app_name">HABBA 2017</string>
     <string name="title_activity_maps">Map</string>
     <string name="car_image">car_image</string>
     <string name="action_settings">Settings</string>
@@ -14,52 +14,40 @@
         <item>Dance</item>
         <item>Design</item>
         <item>Dramatics</item>
-        <item>Arts</item>
         <item>LifeStyle</item>
-        <item>Literary Arts</item>
+        <item>Literary</item>
         <item>Music</item>
         <item>Miscellaneous</item>
         <item>Gaming</item>
         <item>Technical</item>
         <item>Management</item>
-        <item>Intra-college</item>
-        <item>Dance</item>
-        <item>Design</item>
-        <item>Dramatics</item>
-        <item>Arts</item>
-        <item>LifeStyle</item>
-        <item>Literary Arts</item>
-        <item>Music</item>
-        <item>Miscellaneous</item>
-        <item>Gaming</item>
-        <item>Technical</item>
-        <item>Management</item>
-        <item>Intra-college</item>
+        <item>IntraCollege</item>
     </string-array>
 
     <string-array name="Dance">
-        <item>Cinematics</item>
-        <item>Duet Dance</item>
-        <item>Folklore</item>
-        <item>Group Dance</item>
+        <item>Chore0-night</item>
+        <item>Solo-Dance</item>
+        <item>Intra-Dance</item>
     </string-array>
 
     <string-array name="Design">
         <item>Short Film Making</item>
-        <item>Add Making</item>
+        <item>Photo Manipulation</item>
         <item>Photography</item>
-        <item>Typography</item>
+        <item>Sketching</item>
+        <item>Creative Painting</item>
     </string-array>
 
     <string-array name="Dramatics">
-        <item>Improv Comedy</item>
+        <item>Stand-up Comedy</item>
         <item>Mad Ads</item>
+        <item>Street Play</item>
     </string-array>
 
-    <string-array name="Arts">
-        <item>Fine Arts</item>
-        <item>Sketching</item>
-        <item>Vegitable Carving</item>
+    <string-array name="LifeStyle">
+        <item>Fashionista</item>
+        <item>Le Senorita</item>
+        <item>Le Senor</item>
     </string-array>
     <string name="action_add_favourite">Add to Favourites</string>
     <string name="action_play_next">Play Next</string>
@@ -89,19 +77,67 @@
     <string name="string_mobile">Enter Mobile Number</string>
     <string name="string_enter_email">Enter your email</string>
     <string name="button_register">Register</string>
-    <string-array name="LifeStyle">
-        <item>Fashion Show</item>
-        <item>Be a super Diva</item>
+    <string-array name="Literary">
+        <item>G-Quiz</item>
+        <item>Themed quiz</item>
+        <item>Spell-Bee</item>
+        <item>Debate</item>
+    </string-array>
+
+    <string-array name="Music">
+        <item>Battle of Bands</item>
+        <item>Beat boxing</item>
+        <item>Antakshari</item>
+        <item>Solo-Singing</item>
+        <item>Rap Battle</item>
+        <item>Mock Rock</item>
+        <item>Electronic Music Production</item>
+
     </string-array>
 
     <string-array name="Gaming">
-        <item>Fifa 14</item>
-        <item>Call of Duty</item>
+        <item>Fifa 15</item>
+        <item>Call of Duty:MW4</item>
         <item>Dota 2</item>
+        <item>Counter Strike 1.6</item>
+        <item>Need for Speed:Most Wanted</item>
     </string-array>
 
-    <string-array name="Cinematics">
-        <item>252120</item>
+    <string-array name="Miscellaneous">
+        <item>Super Minute</item>
+        <item>Tug of War</item>
+        <item>Map the Snap</item>
+        <item>Face Painting</item>
+        <item>Nail Art</item>
+        <item>Master chef</item>
+        <item>Habbathon</item>
+        <item>Hog-a-thon</item>
+        <item>Mock CID</item>
+    </string-array>
+
+    <string-array name="Technical">
+        <item>Reverse Coding</item>
+        <item>Junkyard Wars</item>
+        <item>Bomb Defuser</item>
+    </string-array>
+
+    <string-array name="Management">
+        <item>Karyaneeti</item>
+        <item>Mock IPL</item>
+        <item>Market Mayhem</item>
+    </string-array>
+
+    <string-array name="IntraCollege">
+        <item>Acharya\'s Got Talent</item>
+        <item>Mr and Miss Habba</item>
+        <item>Lagori</item>
+        <item>Slow Bike Race</item>
+        <item>Rangoli</item>
+        <item>Break the Matki</item>
+        <item>Beg,Borrow,Steal</item>
+        <item>Treasure-Hunt</item>
+        <item>Open Air</item>
+        <item>Faculty\'s Got Talent</item>
     </string-array>
     <string name="title_activity_calendar">Calendar</string>
 

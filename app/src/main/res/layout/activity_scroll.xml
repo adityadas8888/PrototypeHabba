@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".map.Scroll.Scroll"
-    >
+    android:background="@mipmap/image1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,6 +38,7 @@
                     android:layout_gravity="bottom"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+                    android:gravity="center"
                     android:textSize="40sp"
                     android:background="#78000000"
                     android:textAllCaps="false"
@@ -56,12 +58,15 @@
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
                 android:elevation="3dp"
-                card_view:cardCornerRadius="@dimen/card_album_radius">
+                app:cardBackgroundColor="#70000000"
+                card_view:cardCornerRadius="@dimen/card_album_radius"
+               >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="#70000000">
 
                     <TextView
                         android:text="Description"
@@ -70,7 +75,7 @@
                         android:id="@+id/textView5"
                         android:paddingTop="20dp"
                         android:textSize="20sp"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:paddingLeft="5dp" />
 
                     <TextView
@@ -82,7 +87,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
                         android:layout_gravity="bottom|center"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:layout_marginBottom="6dp" />
 
                 </LinearLayout>
@@ -100,11 +105,13 @@
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
                 android:elevation="3dp"
+                app:cardBackgroundColor="#70000000"
                 card_view:cardCornerRadius="@dimen/card_album_radius">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="#70000000">
 
                     <TextView
                         android:text="Rules and Regulation"
@@ -113,7 +120,7 @@
                         android:id="@+id/textView6"
                         android:paddingTop="20dp"
                         android:textSize="20sp"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:paddingLeft="5dp" />
 
                     <TextView
@@ -125,7 +132,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
                         android:layout_gravity="bottom|center"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:layout_marginBottom="6dp" />
 
                 </LinearLayout>
@@ -141,13 +148,15 @@
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
                 android:elevation="3dp"
+                app:cardBackgroundColor="#70000000"
                 card_view:cardCornerRadius="@dimen/card_album_radius"
                 android:onClick="caller">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="#70000000">
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -159,7 +168,7 @@
                         android:id="@+id/textView7"
                         android:paddingTop="20dp"
                         android:textSize="20sp"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:paddingLeft="5dp" />
                     <ImageView
                         android:layout_width="25dp"
@@ -179,7 +188,7 @@
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
                         android:layout_gravity="bottom|center"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:layout_marginBottom="6dp" />
 
 
@@ -194,7 +203,7 @@
                         android:layout_marginRight="12dp"
                         android:layout_gravity="bottom|left"
 
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:layout_marginBottom="6dp"
                         />
 
@@ -216,11 +225,13 @@
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
                 android:elevation="3dp"
+                app:cardBackgroundColor="#70000000"
                 card_view:cardCornerRadius="@dimen/card_album_radius">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="#70000000">
 
                     <TextView
                         android:text="Amount"
@@ -229,19 +240,55 @@
                         android:id="@+id/textView8"
                         android:paddingTop="20dp"
                         android:textSize="20sp"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:paddingLeft="5dp" />
+                    <TextView
+                        android:text="Registration Amount:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView9"
+                        android:paddingTop="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                         />
 
                     <TextView
                         android:id="@+id/amount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingTop="20dp"
-                        android:textSize="15sp"
+
+                        android:paddingTop="10dp"
+                        android:textSize="17sp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginRight="12dp"
                         android:layout_gravity="bottom|center"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
+                        android:layout_marginBottom="6dp" />
+                    <TextView
+                        android:text="Price Money:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:paddingTop="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/pmoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:paddingTop="10dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_gravity="bottom|center"
+                        android:textColor="@android:color/white"
                         android:layout_marginBottom="6dp" />
 
                 </LinearLayout>
@@ -256,7 +303,8 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:background="#FFFFFF"/>
         </LinearLayout>
 
     </ScrollView>

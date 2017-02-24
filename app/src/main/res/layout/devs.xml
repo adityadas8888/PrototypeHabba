@@ -9,8 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
 
-    tools:context="com.example.aditya.prototypehabba.map.Devs.Devs"
-    android:background="@mipmap/scryptback">
+    tools:context="com.codefive.adichi.myapplication.map.Devs.Devs"
+    android:background="@mipmap/image1">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        android:layout_below="@id/texdev">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,6 +82,14 @@
                         android:background="@android:color/transparent"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentStart="true" />
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="chiragsastry@gmail.com"/>
 
 
                 </RelativeLayout>
@@ -131,6 +139,14 @@
                         android:background="@android:color/transparent"
                         android:onClick="call"
                         android:tag="8861583640"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="aditya.das8.ad@gmail.com"/>
 
                 </RelativeLayout>
 
@@ -183,6 +199,14 @@
                         android:background="@android:color/transparent"
                         android:onClick="call"
                         android:tag="9740358104"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView3"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="csraghav7@gmail.com"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -228,6 +252,14 @@
                         android:background="@android:color/transparent"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/face4" />
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView4"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="prateekhegde12@gmail.com"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -274,6 +306,14 @@
                         android:background="@android:color/transparent"
                         android:onClick="call"
                         android:tag="7353717705"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView5"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="arjunptm@gmail.com"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -305,6 +345,7 @@
                         android:text="Ankur Vinekar\nUI/UX Designer\nComputer Science"
                         android:textColor="@android:color/background_light"
                         android:layout_toEndOf="@+id/face6"
+                        android:layout_centerVertical="true"
                         android:background="@android:color/transparent"
                         />
 
@@ -319,6 +360,14 @@
                         android:background="@android:color/transparent"
                         android:onClick="call"
                         android:tag="9663218396"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView6"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="ankurvinekar@gmail.com"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -365,6 +414,14 @@
                         android:background="@android:color/transparent"
                         android:onClick="call"
                         android:tag="9538757478"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView7"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="hrushikeshchoudary@gmail.com"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -411,6 +468,15 @@
                         android:background="@android:color/transparent"
                         android:onClick="call"
                         android:tag="9738863810"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_toStartOf="@id/imageView8"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/mail"
+                        android:onClick="mail"
+                        android:tag="nktalwar15@gmail.com"/>
+
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>

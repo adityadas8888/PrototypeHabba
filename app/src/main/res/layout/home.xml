@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@mipmap/homeback"
+
     >
-<WebView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/webview"></WebView>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/habbalogo"
+        android:id="@+id/imageView11"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:textColor="@android:color/white"
-        android:text=" Click me to open menu"
         android:textSize="17sp"
-        android:padding="12dp"
         android:id="@+id/btn_open_menu"
-        android:layout_marginBottom="209dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/imageView11"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent" />
 
 
 </RelativeLayout>
